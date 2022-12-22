@@ -17,24 +17,6 @@ namespace TestBase
             Logger = LogManager.GetLogger(typeof(TClass).ToString());
         }
 
-        //protected async Task WsAction(Func<IWsAdapter, Task> action)
-        //    {
-        //        IWsAdapter wsAdapter = new WsAdapter.WsAdapter(CommonInfo.AgentMainAddress);
-        //        try
-        //        {
-        //            await wsAdapter.Open();
-        //            await action(wsAdapter);
-        //        }
-        //        catch (Exception e)
-        //        {
-        //            Console.WriteLine(e);
-        //        }
-        //        finally
-        //        {
-        //            wsAdapter.Close();
-        //        }
-        //    }
-        //}
 
         protected async Task WsAction(Func<IWsAdapter, Task> action,string WssAddress)
         {

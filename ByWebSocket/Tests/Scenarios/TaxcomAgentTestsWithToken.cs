@@ -15,7 +15,7 @@ using static LibrarySettings.ConstsForInput;
 namespace WebSocketTests.Tests.Scenarios
 {
     [TestFixture]
-    public class TaxcomAgentTestsWithToken : WsTestBase<TaxcomAgentTestsWithToken>
+    public class AgentAgentTestsWithToken : WsTestBase<AgentAgentTestsWithToken>
     {
 
         [Test, Description("Авторизация")]
@@ -42,8 +42,8 @@ namespace WebSocketTests.Tests.Scenarios
             }, CommonInfo.AgentMainAddress);
         }
 
-        [Test, Description("TaxcomAgent запрос о получении бюджета")]
-        public async Task TaxComAgentDocumentGetBudget()
+        [Test, Description("AgentAgent запрос о получении бюджета")]
+        public async Task AgentAgentDocumentGetBudget()
         {
             Logger.LogCurrentMethodName();
             await WsAction(async wsAdapter =>

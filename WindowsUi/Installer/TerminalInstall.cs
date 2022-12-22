@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
+using Constants;
 using Constants.Windows;
 using LibrarySettings;
 using MessageGenerator.ClientPinInput;
@@ -15,7 +16,7 @@ using Application = FlaUI.Core.Application;
 
 namespace AWindowsUi.Installer
 {
-    [TestFixture , NUnit.Framework.Description("https://tkovacs-dev.github.io/nunit3viewer/# Установка Агента и Ввод пинкода(на крипто про 5 придется вручную ввести пин")]
+    [TestFixture , NUnit.Framework.Description("https://tkovacs-dev.github.io/nunit3viewer/#")]
     public class TerminalInstall : WsTestBase<TerminalInstall>
     {
         private Application _installer;
@@ -59,8 +60,8 @@ namespace AWindowsUi.Installer
         [Test, Order(3)]
         public void Test_Install_Silent_Mode()
         {
-            var desktopPath = InstallPathTuple.GetPathTaxcomAgent().TaxComAgentinstallerPath;
-            var installerPath = Path.Combine(desktopPath, "TaxcomAgentInstaller.exe");
+            var desktopPath = InstallPathTuple.GetPathAgentAgent().AgentAgentinstallerPath;
+            var installerPath = Path.Combine(desktopPath, "AgentInstaller.exe");
             
             var typeInstall = InstallationFactory.Build();
 
@@ -122,7 +123,7 @@ namespace AWindowsUi.Installer
                     Assert.That(res2, Is.Not.Empty);
                     Assert.That(res2, Does.Match("sign_content"));
                 });
-            });
+            }, CommonInfo.AgentMainAddress);
             Assert.Pass("Пин код введен");
         }
     }

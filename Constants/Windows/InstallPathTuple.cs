@@ -7,7 +7,7 @@ namespace Constants.Windows
     {
         public static (string pathUninstalStandartAgent, string StandartUninstallname) GetPathUninstallStandardAgent()
         {
-            var pathUninstallerStandardMode = (@"%USERPROFILE%\AppData\Roaming\TaxcomAgent\uninstaller.exe", "Standart Agent Uninstaller Tool");
+            var pathUninstallerStandardMode = (@"%USERPROFILE%\AppData\Roaming\AgentAgent\uninstaller.exe", "Standart Agent Uninstaller Tool");
             return pathUninstallerStandardMode;
         }
 
@@ -15,25 +15,25 @@ namespace Constants.Windows
         {
             if (Environment.Is64BitOperatingSystem == true)
             {
-                var pathUninstallerTerminalMode = (@"C:\Program Files (x86)\Taxcom\TaxcomTerminalAgent\uninstaller.exe", "Terminal Agent Uninstaller Tool");
+                var pathUninstallerTerminalMode = (@"C:\Program Files (x86)\Agent\AgentTerminalAgent\uninstaller.exe", "Terminal Agent Uninstaller Tool");
                 return pathUninstallerTerminalMode;
             }
             else
             {
-                var pathUninstallerTerminalMode = (@"C:\Program Files\Taxcom\TaxcomTerminalAgent\uninstaller.exe", "Terminal Agent Uninstaller Tool");
+                var pathUninstallerTerminalMode = (@"C:\Program Files\Agent\AgentTerminalAgent\uninstaller.exe", "Terminal Agent Uninstaller Tool");
                 return pathUninstallerTerminalMode;
             }
         }
 
         public static (string pathAppSettingsStandartAgent, string name) GetPathAppSettings()
         {
-            var pathSettings = ($@"%USERPROFILE%\AppData\Roaming\TaxcomAgent\{SettingsAgent.GetVersion().ver}\appsettings.json", "Agent AppSettings");
+            var pathSettings = ($@"%USERPROFILE%\AppData\Roaming\AgentAgent\{SettingsAgent.GetVersion().ver}\appsettings.json", "Agent AppSettings");
             return pathSettings;
         }
 
-        public static (string id, string TaxComAgentinstallerPath) GetPathTaxcomAgent()
+        public static (string id, string AgentAgentinstallerPath) GetPathAgentAgent()
         {
-            var resultPathAgentInstall = ("1", ConstsForInput.PathTaxcomAgentInstaller);
+            var resultPathAgentInstall = ("1", ConstsForInput.PathAgentAgentInstaller);
             return resultPathAgentInstall;
         }
     }

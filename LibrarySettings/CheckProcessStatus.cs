@@ -8,7 +8,7 @@ namespace LibrarySettings
     {
         public static void GetStatusAgent()
         {
-            using var processAgent = Process.GetProcesses().FirstOrDefault(p => p.ProcessName == "TaxcomAgent");
+            using var processAgent = Process.GetProcesses().FirstOrDefault(p => p.ProcessName == "AgentAgent");
             if (processAgent != null)
             {
                 throw new Exception($"{processAgent} - агент запущен");

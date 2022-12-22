@@ -57,10 +57,10 @@
 		<None Update="OldDllLibrary\jcverify.txt">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</None>
-		<None Update="OldDllLibrary\npTaxcomCryptoAX.dll">
+		<None Update="OldDllLibrary\npAgentCryptoAX.dll">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</None>
-		<None Update="OldDllLibrary\npTaxcomCryptoAX64.dll">
+		<None Update="OldDllLibrary\npAgentCryptoAX64.dll">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</None>
 		<None Update="OldDllLibrary\PKCS11Client.dll">

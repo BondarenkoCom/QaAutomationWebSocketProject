@@ -31,7 +31,7 @@ namespace WebSocketPinCodeTests
                     Assert.Pass("USB don't have token ");
                 }
 
-                foreach (var process in Process.GetProcessesByName("TaxcomAgent"))
+                foreach (var process in Process.GetProcessesByName("AgentAgent"))
                 {
                     process.Kill();
                     Thread.Sleep(5000);
@@ -60,7 +60,7 @@ namespace WebSocketPinCodeTests
 
                 var filePath =
                     Environment.ExpandEnvironmentVariables(
-                        @"%USERPROFILE%\AppData\Roaming\TaxcomAgent\TaxcomAgent.exe");
+                        @"%USERPROFILE%\AppData\Roaming\AgentAgent\AgentAgent.exe");
                 Process.Start(filePath);
             }
             catch (Exception e)

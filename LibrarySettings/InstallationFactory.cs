@@ -16,11 +16,11 @@ namespace LibrarySettings
            switch (jsonSettings.TypeAgent)
            {
               case "standartAgent":
-                  const string argumentInstallStandart = "TaxcomAgentInstaller.exe /S";
+                  const string argumentInstallStandart = "AgentAgentInstaller.exe /S";
                   return argumentInstallStandart;
 
               case "terminalAgent":
-                  const string argumentInstallTerminal = @"/Params=terminal /S /D=C:\Taxcom\TaxcomMasterAgent";
+                  const string argumentInstallTerminal = @"/Params=terminal /S /D=C:\Agent\AgentMasterAgent";
                   return argumentInstallTerminal;
               default:
                   throw new Exception($"install path is empty - {jsonSettings.TypeAgent}");
@@ -47,7 +47,7 @@ namespace LibrarySettings
             {
                 var jsonStr =
                     File.ReadAllText(
-                        @"C:\Users\BondarenkoAS\source\repos\taxcomagent\TaxcomAgent\UnitTests\Integration\LibrarySettings\config.json");
+                        @"C:\Users\BondarenkoAS\source\repos\Agentagent\AgentAgent\UnitTests\Integration\LibrarySettings\config.json");
                 return jsonStr;
             }
 
@@ -61,7 +61,7 @@ namespace LibrarySettings
         {
             if (Debugger.IsAttached)
             {
-                var pathAppsettings = @"Data Source = C:\Users\BondarenkoAS\source\repos\taxcomagent\TaxcomAgent\UnitTests\Integration\LibrarySettings\TestValues.db";
+                var pathAppsettings = @"Data Source = C:\Users\BondarenkoAS\source\repos\Agentagent\AgentAgent\UnitTests\Integration\LibrarySettings\TestValues.db";
                 return pathAppsettings;
             }
 

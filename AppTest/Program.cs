@@ -12,9 +12,8 @@ namespace AppTest
     {
         private static readonly List<Assembly> TestAssemblies = new()
         {
-            //Assembly.GetAssembly(typeof(TerminalInstall)),
             Assembly.GetAssembly(typeof(TerminalInstall)),
-            Assembly.GetAssembly(typeof(WebSocketTests.Tests.Scenarios.TaxcomAgentTestsWithToken)),
+            Assembly.GetAssembly(typeof(WebSocketTests.Tests.Scenarios.AgentAgentTestsWithToken)),
             Assembly.GetAssembly(typeof(OldCryptoTests.OldWithNewComparatorTests)),
             Assembly.GetAssembly(typeof(WebSocketTests.Tests.CryptoMethod.Sign)),
             Assembly.GetAssembly(typeof(WebSocketTests.Tests.SupportMethod.VersionInfo)),

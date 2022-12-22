@@ -4,7 +4,7 @@ namespace Constants.Windows
 {
     public static class Ui
     {
-        public static string ProcessOnWindowsName => "TaxcomAgent";
+        public static string ProcessOnWindowsName => "AgentAgent";
 
         public static TimeSpan BigWaitTimeout => TimeSpan.FromSeconds(30);
 

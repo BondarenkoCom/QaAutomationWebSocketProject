@@ -72,23 +72,5 @@ namespace TestRestApi
                     $"\nПорт - {_restWork.CheckPort()}");
             }));
         }
-
-        [Test]
-        public async Task Test_wss()
-        {
-            Logger.LogCurrentMethodName();
-            var fullWss =$"{CommonInfo.WssApi}{_restWork.CheckPort()}";
-            await WsAction(async wsAdapter =>
-            {
-                var wssRequest = $"{CommonInfo.WssApi}{_restWork.CheckPort()}";
-                
-                Logger.Info($"выбранный порт - {wssRequest}");
-
-                var resultWss = await wsAdapter.SendMessageWithoutCloseSocket(wssRequest);
-
-                Console.WriteLine(resultWss);
-
-            }, fullWss);
-        }
     }
 }

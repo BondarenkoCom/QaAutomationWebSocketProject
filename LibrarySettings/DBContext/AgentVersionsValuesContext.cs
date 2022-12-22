@@ -31,7 +31,7 @@ namespace LibrarySettings.DBContext
 
             modelBuilder.Entity<AgentPathModel>(entity =>
             {
-                entity.ToTable("TaxcomAgentInstallers");
+                entity.ToTable("AgentAgentInstallers");
                 entity.HasNoKey();
 
                 entity.Property(e => e.Id)

@@ -27,7 +27,7 @@ namespace LibrarySettings.DBContext
                 if (Debugger.IsAttached)
                 {
                     var pathSqlIte = 
-                        optionsBuilder.UseSqlite(@"Data Source = C:\Users\BondarenkoAS\source\repos\taxcomagent\TaxcomAgent\UnitTests\Integration\AppTest\TestValues.db");
+                        optionsBuilder.UseSqlite(@"Data Source = C:\Users\BondarenkoAS\source\repos\Agentagent\AgentAgent\UnitTests\Integration\AppTest\TestValues.db");
                 }
                 else
                 {

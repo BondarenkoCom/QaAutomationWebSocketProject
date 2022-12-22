@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <Platforms>AnyCPU;x86</Platforms>
+	  <ValidateExecutableReferencesMatchSelfContained>false</ValidateExecutableReferencesMatchSelfContained>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NUnit" Version="3.13.3" />
+    <PackageReference Include="NUnit.ConsoleRunner" Version="3.15.0" />
+    <PackageReference Include="NUnitLite" Version="3.13.3" />
+    <PackageReference Include="Serilog" Version="2.11.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ByWebSocket\WebSocketTests.csproj" />
+    <ProjectReference Include="..\OldCryptoTests\OldCryptoTests.csproj" />
+    <ProjectReference Include="..\TestRestApi\TestRestApi.csproj" />
+    <ProjectReference Include="..\WebSocketPincodeTests\WebSocketPinCodeTests.csproj" />
+    <ProjectReference Include="..\WindowsUi\AWindowsUi.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\PublishProfiles\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="config.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

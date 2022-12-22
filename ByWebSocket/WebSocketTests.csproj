@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0-windows</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+
+    <Platforms>AnyCPU;x86</Platforms>
+	  <ValidateExecutableReferencesMatchSelfContained>false</ValidateExecutableReferencesMatchSelfContained>
+
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.1.0" />
+    <PackageReference Include="NUnit" Version="3.13.3" />
+    <PackageReference Include="coverlet.collector" Version="3.0.2" />
+    <PackageReference Include="NUnit3TestAdapter" Version="4.2.1" />
+    <PackageReference Include="RestSharp" Version="108.0.1" />
+    <PackageReference Include="websocketsharp.core" Version="1.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Constants\Constants.csproj" />
+    <ProjectReference Include="..\LibrarySettings\LibrarySettings.csproj" />
+    <ProjectReference Include="..\LogSupport\LogSupport.csproj" />
+    <ProjectReference Include="..\MakeCommunicate\MakeCommunicate.csproj" />
+    <ProjectReference Include="..\MessageGenerator\MessageGenerator.csproj" />
+    <ProjectReference Include="..\OldCryptoTests\OldCryptoTests.csproj" />
+    <ProjectReference Include="..\WsAdapter\WsAdapter.csproj" />
+  </ItemGroup>
+
+</Project>

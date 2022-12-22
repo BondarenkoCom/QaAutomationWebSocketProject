@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <Platforms>AnyCPU;x86</Platforms>
+	  <ValidateExecutableReferencesMatchSelfContained>false</ValidateExecutableReferencesMatchSelfContained>
+
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LibrarySettings\LibrarySettings.csproj" />
+  </ItemGroup>
+
+</Project>
